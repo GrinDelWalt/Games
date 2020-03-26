@@ -44,7 +44,7 @@ namespace Example_007
                 {
                     Console.WriteLine($"Поздравляю, число угадано! Число попыток: {count}.");
                     Console.ReadKey();
-                    break;
+                    //break;
                 }
             }
 
