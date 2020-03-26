@@ -4,10 +4,16 @@ namespace Games
 {
     public class LVL1
     {
-        private static string user_1;
-       
-        private static string user_2;
+        private string user_1;
+
+        private string user_2;
         
+        public LVL1(string user1, string user2)
+        {
+            user_1 = user1;
+            user_2 = user2;
+        }
+
         public void DoGame1()
         {
             Random rand = new Random();
@@ -15,14 +21,6 @@ namespace Games
             int gameNumber1;
             int gameNumber2;
             int count = 0;
-
-            //string user_1;
-            //string user_2;
-            Console.Write("Введите имя первго игрока ");
-            user_1 = Console.ReadLine();
-
-            Console.Write("Введите имя второго игрока ");
-            user_2 = Console.ReadLine();
 
             Console.WriteLine($"Приветствую вас {user_1} и {user_2}! Пусть победит сильнейший");
             for (int i = 0; ; i++)

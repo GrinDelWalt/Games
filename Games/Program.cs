@@ -6,7 +6,13 @@ namespace Games
     {
         static void Main(string[] args)
         {
-            LVL1 lvl1 = new LVL1();
+            Console.Write("Введите имя первго игрока ");
+            string user_1 = Console.ReadLine();
+
+            Console.Write("Введите имя второго игрока ");
+            string user_2 = Console.ReadLine();
+
+            LVL1 lvl1 = new LVL1(user_1, user_2);
 
             while (Console.ReadLine() != "n")
             {
