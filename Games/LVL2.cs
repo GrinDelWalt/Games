@@ -1,29 +1,29 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace Games
 {
-    public class LVL1
+    class LVL2
     {
         private string user_1;
 
         private string user_2;
-        
-        public LVL1(string user1, string user2)
+
+        public LVL2(string user1, string user2)
         {
             user_1 = user1;
             user_2 = user2;
         }
-
-        public void DoGame1()
+        public void DoGame2()
         {
             Random rand = new Random();
-            int iiNumber = rand.Next(7, 21);
+            int iiNumber = rand.Next(10, 51);
             int gameNumber1;
             int gameNumber2;
-            
+
 
             Console.WriteLine($"{user_1} VS {user_2} Пусть победит сильнейший");
-
             for (int i = 0; ; i++)
             {
                 Console.WriteLine($"Число равно {iiNumber}");
@@ -32,10 +32,11 @@ namespace Games
                 {
                     Console.WriteLine($"Ходит игрок {user_1}");
                     
-                    gameNumber1 = Convert.ToInt32(Console.ReadLine());                    
-                    if (gameNumber1 > 4)
+                    gameNumber1 = Convert.ToInt32(Console.ReadLine());
+                    
+                    if (gameNumber1 > 6)
                     {
-                        Console.WriteLine("Число больше 4");
+                        Console.WriteLine("Число больше 6");
                         continue;
                     }
                     else if (gameNumber1 < 1)
@@ -47,8 +48,7 @@ namespace Games
                     else
                     {
                         iiNumber = iiNumber - gameNumber1;
-                        Console.WriteLine($"Число равно {iiNumber}");
-                        
+                        Console.WriteLine($"Число равно {iiNumber}");                        
 
                         if (iiNumber > 0)
                         {
@@ -75,9 +75,9 @@ namespace Games
                     gameNumber2 = Convert.ToInt32(Console.ReadLine());
                     
 
-                    if (gameNumber2 > 4)
+                    if (gameNumber2 > 6)
                     {
-                        Console.WriteLine("Число больше 4");
+                        Console.WriteLine("Число больше 6");
                         continue;
                     }
                     else if (gameNumber2 < 1)
